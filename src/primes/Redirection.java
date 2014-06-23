@@ -1,0 +1,25 @@
+package primes;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * Created by Stefan on 14.03.14.
+ */
+@WebServlet (urlPatterns = {"/primes", "/primes/"})
+public class Redirection extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        response.sendRedirect("/primes/searcher");
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        response.sendRedirect("/primes/searcher");
+    }
+}
